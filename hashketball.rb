@@ -193,3 +193,36 @@ def team_names
     end
     numbers_array
   end
+
+  def player_stats(player_name)
+    stats_hash = {}
+    game_hash.each do |location, team_data|
+      team_data.each do |stats, data|
+        if stats == :players
+          data.each do |player|
+            if player[:player_name] == players_name
+           stats_hash = player.delete_if do |key, value|
+             key == :player_name
+           end
+         end
+       end
+     end
+   end
+ end
+ stats_hash
+end
+ 
+
+
+
+
+
+
+
+
+
+
+# def big_shoe_rebounds
+#   num_rebounds = 0
+#   largest_shoe = 0
+# end
