@@ -200,7 +200,7 @@ def team_names
       team_data.each do |stats, data|
         if stats == :players
           data.each do |player|
-            if player[:player_name] == players_name
+            if player[:player_name] == player_name
            stats_hash = player.delete_if do |key, value|
              key == :player_name
            end
@@ -211,7 +211,7 @@ def team_names
  end
  stats_hash
 end
- 
+
 
 
 
