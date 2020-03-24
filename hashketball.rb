@@ -176,3 +176,19 @@ def team_names
       end
     team_names_array
   end
+
+  def player_numbers(team_name)
+  numbers_array = []
+  if team_data[:team_name] == team_name
+      team_data.each do |stats, data|
+        if stats == :players
+          data.each do |player|
+            numbers_array << player[:number]
+
+            end
+          end
+        end
+      end
+    end
+    numbers_array
+  end
